@@ -43,10 +43,10 @@ public class FXMLDocumentController implements Initializable {
 
     private void enterWord() {  //textField:key入力時処理(ENTER)
         if (textF.getText().length() != 0) {
-            //ma = new MorphologicalAnalysis(textF.getText());    //形態素解析
-            //ws = new WordShow(ma.tokenizer());  //表示
-            tj = new TestJena(textF.getText());    //DBPedia
-            ws = new WordShow(tj.main());  //表示
+            ma = new MorphologicalAnalysis(textF.getText());    //形態素解析
+            ws = new WordShow(ma.tokenizer());  //表示
+//            tj = new TestJena(textF.getText());    //DBPedia
+//            ws = new WordShow(tj.main());  //表示
 
             Sleep sp = new Sleep();     //連打対策
             sp.sleepMethod();
