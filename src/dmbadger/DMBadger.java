@@ -35,7 +35,7 @@ public class DMBadger extends Application {
         //ウィンドウ位置指定
         Rectangle2D d = Screen.getPrimary().getVisualBounds();
         stage.setX(d.getMaxX() - 500);
-        stage.setY(d.getMaxY() - 270);
+        stage.setY(d.getMaxY() - 350);
 
         stage.setScene(scene);              //シーンをステージにセット
         stage.show();                       //ステージの表示

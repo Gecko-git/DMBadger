@@ -41,6 +41,8 @@ public class FXMLDocumentController implements Initializable {
     MorphologicalAnalysis ma;
     TestJena tj;
 
+    TestWordNet twn;
+    
     private void enterWord() {  //textField:key入力時処理(ENTER)
         if (textF.getText().length() != 0) {
             ma = new MorphologicalAnalysis(textF.getText());    //形態素解析
@@ -48,6 +50,8 @@ public class FXMLDocumentController implements Initializable {
 //            tj = new TestJena(textF.getText());    //DBPedia
 //            ws = new WordShow(tj.main());  //表示
 
+            twn = new TestWordNet(textF.getText());
+            
             Sleep sp = new Sleep();     //連打対策
             sp.sleepMethod();
             timeline.stop();    //前のtimelineを念のため終了させる
